@@ -43,7 +43,7 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: 'What license did you use?',
-            choices: ['MIT License', 'Apache 2.0 License', 'ISC License', 'Unlicense'],
+            choices: ['MIT License', 'Apache 2.0 License', 'ISC License', 'None'],
         },
         {
             type: 'input',
