@@ -52,14 +52,37 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
+  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
+  ### ${renderLicenseLink(data.license)}
+
 
   ## Table of Contents:
   ### *[License](*license)
+  ### *[Description](*description)
   ### *[Installation](*Installation)
   ### *[Usage](*usage)
   ### *[Contributors](*contributors)
   ### *[Tests(*tests)
   ### *[Questions](*questions)
+
+  ### Description
+  ### ${data.description}
+
+  ## Installation
+  ### ${data.installation}
+
+  ## Usage 
+  ### ${data.usage}
+
+  ## Contributors
+  ### ${data.contributions}
+
+  ## Test 
+  ### ${data.test}
+
+  ## Questions
+  ### If you have any questions please feel free to contact me at
+  ### ${data.questions}
 
 
   
