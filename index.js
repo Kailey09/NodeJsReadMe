@@ -2,119 +2,65 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'title',
-            message: 'Whats the title of your project?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
+            name: 'heading',
+            message: 'What is the title of the project?',
+        },
+        {
+            type: 'input',
+            name: ' description',
+            message: 'Project description?',
+        },
+        {
+            type: 'input',
+            name: 'Table of Contents',
+            message: 'Table of Contents',
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'How do you install your app?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
+            message: 'What does the user need to install to run this app?',
+        },
+       
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'How can users contribute to your project?',
         },
         {
             type: 'input',
-            name: 'instructions',
-            message: 'Instructions to be follow?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
+            name: 'contributing',
+            message: 'Provide test for your project?',
         },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'Any credits?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'How do you use your app?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
-        },
+       
         {
             type: 'list',
-            name: 'license',
+            name: 'test',
             message: 'What license did you use?',
             choices: ['MIT License', 'Apache License', 'GPL License', 'GMU License', 'N/a'],
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
         },
         {
             type: 'input',
-            name: 'github',
+            name: 'questions',
             message: 'Whats your Github username?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
         },
         {
             type: 'input',
-            name: 'email',
+            name: 'questions',
             message: 'Whats your email?',
-            validate: nameInput => {
-                if(nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter project name!');
-                    return false;
-                }
-            }
         },
     ]);
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile()
+}
 
 // TODO: Create a function to initialize app
 function init() {}
