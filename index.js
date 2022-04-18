@@ -8,7 +8,7 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'heading',
+            name: 'title',
             message: 'What is the title of the project?',
         },
         {
@@ -18,7 +18,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'Table of Contents',
+            name: 'table of contents',
             message: 'Table of Contents',
         },
         {
@@ -34,15 +34,15 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'contributing',
+            name: 'test',
             message: 'Provide test for your project?',
         },
        
         {
             type: 'list',
-            name: 'test',
+            name: 'license',
             message: 'What license did you use?',
-            choices: ['MIT License', 'Apache License', 'GPL License', 'GMU License', 'N/a'],
+            choices: ['MIT License', 'Apache License', 'GPL License', 'GMU License'],
         },
         {
             type: 'input',
