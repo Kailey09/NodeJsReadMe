@@ -1,4 +1,4 @@
-;// TODO: Create a function that returns a license badge based on which license is passed in
+// TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = "";
@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
     badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
   } else if (license === 'Apache 2.0') {
     badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-  } else if (license === ISC) {
+  } else if (license === 'ISC') {
     badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
   } else {
     badge = ''
@@ -53,33 +53,33 @@ function generateMarkdown(data) {
 
 
   ## Table of Contents:
-  ### *[License](*license)
-  ### *[Description](*description)
-  ### *[Installation](*Installation)
-  ### *[Usage](*usage)
-  ### *[Contributors](*contributors)
-  ### *[Tests(*tests)
-  ### *[Questions](*questions)
+  ### *[License](#license)
+  ### *[Description](#description)
+  ### *[Installation](#installation)
+  ### *[Usage](#usage)
+  ### *[Contributors](#contributors)
+  ### *[Tests}(#tests)
+  ### *[Questions](#questions)
 
-  ### Description
-  ### ${data.description}
+  ## Description
+   ${data.description}
 
   ## Installation
-  ### ${data.installation}
+   ${data.installation}
 
   ## Usage 
-  ### ${data.usage}
+  ${data.usage}
 
   ## Contributors
-  ### ${data.contributions}
+  ${data.contributions}
 
   ## Test 
-  ### ${data.test}
+  ${data.test}
 
   ## Questions
   ### If you have any questions please feel free to contact me at
-  ### ${data.github}
-  ### ${data.email}
+  ${data.github}
+   ${data.email}
 
 
   

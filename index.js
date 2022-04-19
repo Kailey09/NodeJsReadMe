@@ -2,27 +2,40 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const path = require('path');
+
 
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
         {
             type: 'input',
             name: 'title',
             message: 'What is the title of the project?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a title to continue');
+                    return false;
+                }
+            }
         },
+
         {
             type: 'input',
             name: ' description',
             message: 'Project description?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a description to continue');
+                    return false;
+                }
+            }
+            
         },
-        {
-            type: 'input',
-            name: 'table of contents',
-            message: 'Table of Contents',
-        },
+
         {
             type: 'input',
             name: 'installation',
@@ -33,7 +46,16 @@ const questions = () => {
             type: 'input',
             name: 'contributions',
             message: 'How can users contribute to your project?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a value to continue');
+                    return false;
+                }
+            }
         },
+        
         {
             type: 'input',
             name: 'test',
@@ -41,10 +63,18 @@ const questions = () => {
         },
        
         {
-            type: 'list',
+            type: 'checkbox',
             name: 'license',
             message: 'What license did you use?',
             choices: ['MIT License', 'Apache 2.0 License', 'ISC License', 'None'],
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a license to continue');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -55,21 +85,26 @@ const questions = () => {
             type: 'input',
             name: 'email',
             message: 'Whats your email?',
-        }
-    ])
-};
+        },
+    ];
 
 
 // TODO: Create a function to write README file
 function writeToFile (fileName, data) {
-   return fs.writeFileSync(path.join(process.cwd(), "utils", fileName, data));
+   fs.writeFile(fileName, data, (err) => {
+       if (err) {
+           return console.log(err);
+       }
+       console.log('Sucess! Readme file created!')
+   })
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((returnedData) => {
-        writeToFile('generateReadme.md', generate({...returnedData}));
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile('README.md', generateMarkdown(userInput));
     });
 };
 
