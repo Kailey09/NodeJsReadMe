@@ -40,6 +40,14 @@ const questions = [
             type: 'input',
             name: 'installation',
             message: 'What does the user need to install to run this app?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a title to continue');
+                    return false;
+                }
+            }
         },
        
         {
@@ -55,11 +63,19 @@ const questions = [
                 }
             }
         },
-        
+
         {
             type: 'input',
             name: 'test',
             message: 'Provide test for your project?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a test to continue');
+                    return false;
+                }
+            }
         },
        
         {
@@ -80,11 +96,27 @@ const questions = [
             type: 'input',
             name: 'github',
             message: 'Whats your Github username?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a username to continue');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
             message: 'Whats your email?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter a email to continue');
+                    return false;
+                }
+            }
         },
     ];
 
