@@ -49,7 +49,9 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## License:
-  [![liscense](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.renderLicenseBadge})
+
+  
 
 
 
@@ -59,7 +61,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributors](#contributors)
-  - [Tests}(#tests)
+  - [Tests](#tests)
   - [Questions](#questions)
 
   ## Description:

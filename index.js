@@ -23,9 +23,9 @@ const questions = [
 
         {
             type: 'input',
-            name: ' description',
+            name: 'description',
             message: 'Project description?',
-            validate: nameInput => {
+            validate: nameInput => { 
                 if (nameInput) {
                     return true;
                 } else {
@@ -73,6 +73,20 @@ const questions = [
                     return true;
                 } else {
                     console.log('Enter a test to continue');
+                    return false;
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'How do you use this project?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Enter usage to continue');
                     return false;
                 }
             }
