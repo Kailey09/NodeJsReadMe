@@ -1,8 +1,8 @@
 
-  # Readme generator
+  # Readme Generator
 
   ## License:
-  [![License](https://img.shields.io/badge/License-Apache 2.0 License-blue.svg)](https://opensource.org/licenses/undefined)
+  undefined
 
   
 
@@ -24,18 +24,18 @@
    npm install
 
   ## Usage:
-  undefined
+  answer quesions in termianl
 
   ## Contributors:
-  nothing
+  n/a
 
   ## Test: 
-  no test
+  n/a
 
   ## Questions:
   ### If you have any questions please feel free to contact me at
   Kailey09
-   kcoop1323@gmail.com
+   kcoop1323
 
 
   

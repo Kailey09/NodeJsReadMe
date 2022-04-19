@@ -49,7 +49,7 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## License:
-  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.renderLicenseBadge})
+  ${data.renderLicenseBadge}
 
   
 
@@ -82,7 +82,7 @@ function generateMarkdown(data) {
   ## Questions:
   ### If you have any questions please feel free to contact me at
   ${data.github}
-   ${data.email}
+  ${data.email}
 
 
   
