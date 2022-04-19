@@ -49,8 +49,8 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## License:
-  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
-  ### ${renderLicenseLink(data.license)}
+  [![liscense](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+
 
 
   ## Table of Contents:
